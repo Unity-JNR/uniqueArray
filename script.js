@@ -1,5 +1,5 @@
-let array_a=[ 1 , 2, 3, 7]
-let array_b=[ 1 , 2, 3 ,4, 5, 6]
+let array1=[ 1 , 2, 3, 9]
+let array2=[ 1 , 2, 3 ,4, 5, 6]
 function difference(arr1, arr2) {
   // Concatenate the two arrays
   const combinedArray = arr1.concat(arr2);
@@ -11,12 +11,12 @@ function difference(arr1, arr2) {
   const result = uniqueArray.map(String);
   return result;
 }
-const result = difference(array_a, array_b);
+const result = difference(array1, array2);
 console.log(result.sort());
 
 
-let arrayc = [1, 2, 3, 4, 5]
-let arrayd = [1, [2], [3, [[4]]],[5,6]]
+let array3 = [1, 2, 3, 4, 5]
+let array4 = [1, [2], [3, [[4]]],[5,6]]
 
 
 function reducearray(arr) {
@@ -25,14 +25,14 @@ function reducearray(arr) {
     }, []);//[] initial  value of flat
   }
   
-  function differences(arr1, arr2) {
+  function diff(arr1, arr2) {
     const reduce = reducearray(arr1).map(item => String(item));
     const reduce1 = reducearray(arr2).map(item => String(item));
   
-    const uniqueElements = [...new Set([...reduce, ...reduce1])];
+    const combinedArray = [...new Set([...reduce, ...reduce1])];
   
-    return uniqueElements;
+    return combinedArray;
   }
   
-  console.log(differences(arrayc,arrayd));
+  console.log(differences(array4,array5));
   
